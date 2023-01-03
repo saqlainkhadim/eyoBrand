@@ -169,25 +169,35 @@ foreach ($result as $row) {
 		$('#paypal_form').hide();
 		$('#stripe_form').hide();
 		$('#bank_form').hide();
-
+		$('#cash_on_delivery_form').hide();
+		
         $('#advFieldsStatus').on('change',function() {
             advFieldsStatus = $('#advFieldsStatus').val();
             if ( advFieldsStatus == '' ) {
             	$('#paypal_form').hide();
 				$('#stripe_form').hide();
 				$('#bank_form').hide();
+				$('#cash_on_delivery_form').hide();
             } else if ( advFieldsStatus == 'PayPal' ) {
                	$('#paypal_form').show();
 				$('#stripe_form').hide();
 				$('#bank_form').hide();
+				$('#cash_on_delivery_form').hide();
             } else if ( advFieldsStatus == 'Stripe' ) {
                	$('#paypal_form').hide();
 				$('#stripe_form').show();
 				$('#bank_form').hide();
+				$('#cash_on_delivery_form').hide();
             } else if ( advFieldsStatus == 'Bank Deposit' ) {
             	$('#paypal_form').hide();
 				$('#stripe_form').hide();
 				$('#bank_form').show();
+				$('#cash_on_delivery_form').hide();
+            }else if ( advFieldsStatus == 'Cash on Delivery' ) {
+            	$('#paypal_form').hide();
+				$('#stripe_form').hide();
+				$('#bank_form').hide();
+				$('#cash_on_delivery_form').show();
             }
         });
 	});

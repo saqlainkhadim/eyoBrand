@@ -326,6 +326,7 @@ if(!isset($_SESSION['cart_p_id'])) {
 	                                        <option value=""><?php echo LANG_VALUE_35; ?></option>
 	                                        <option value="PayPal"><?php echo LANG_VALUE_36; ?></option>
 	                                        <option value="Bank Deposit"><?php echo LANG_VALUE_38; ?></option>
+	                                        <option value="Cash on Delivery"><?php echo "Cash on Delivery" ?></option>
 	                                    </select>
 	                                </div>
 
@@ -344,6 +345,13 @@ if(!isset($_SESSION['cart_p_id'])) {
 
 
 
+                                    <form action="payment/cash_on_delivery/init.php" method="post" id="cash_on_delivery_form">
+                                        <input type="hidden" name="amount" value="<?php echo $final_total; ?>">
+                                        <div class="col-md-12 form-group">
+                                            <input type="submit" class="btn btn-primary" value="<?php echo "Order Now"; ?>" name="form3">
+                                        </div>
+                                    </form>
+                                    
                                     <form action="payment/bank/init.php" method="post" id="bank_form">
                                         <input type="hidden" name="amount" value="<?php echo $final_total; ?>">
                                         <div class="col-md-12 form-group">
