@@ -190,7 +190,7 @@ foreach ($result as $row) {
 	}
 	if($cur_page == 'customer-billing-shipping-update.php') {
 		?>
-		<title>Update Billing and Shipping Info - <?php echo $meta_title_home; ?></title>
+		<title>Update  Shipping Info - <?php echo $meta_title_home; ?></title>
 		<meta name="keywords" content="<?php echo $meta_keyword_home; ?>">
 		<meta name="description" content="<?php echo $meta_description_home; ?>">
 		<?php
